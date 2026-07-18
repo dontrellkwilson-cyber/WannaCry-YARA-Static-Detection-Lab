@@ -1,0 +1,6 @@
+This is a harmless training file for a YARA lab.
+It is not malware and it does not execute anything.
+WannaCry
+WanaCrypt0r
+tasksche.exe
+WNcry@2ol7
