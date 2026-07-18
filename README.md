@@ -213,9 +213,9 @@ cat wannacry_training_sample.txt
 ```
 
 <p align="center">
-  <img width="900"
-       alt="Harmless WannaCry training sample displayed in Kali Linux"
-       src="PASTE-TRAINING-SAMPLE-IMAGE-URL-HERE" />
+  <img src="https://github.com/user-attachments/assets/261ebf39-25ab-4983-b455-32f6e08cda3c"
+       alt="Linux forensic investigation evidence"
+       width="800">
 </p>
 
 <p align="center">
@@ -241,9 +241,9 @@ WannaCry_Training_Demo wannacry_training_sample.txt
 This confirmed that the YARA rule detected at least one of the defined patterns.
 
 <p align="center">
-  <img width="900"
-       alt="Successful WannaCry YARA match against the harmless training sample"
-       src="PASTE-SUCCESSFUL-YARA-MATCH-IMAGE-URL-HERE" />
+  <img src="https://github.com/user-attachments/assets/f9cde073-c09f-4cc9-b6e5-e0a8988b91a7"
+       alt="Linux forensic investigation evidence"
+       width="800">
 </p>
 
 <p align="center">
@@ -269,9 +269,9 @@ yara wannacry.yara clean_test.txt
 YARA returned no output, which confirmed that the clean file did not match the rule.
 
 <p align="center">
-  <img width="900"
-       alt="WannaCry YARA rule producing no match against a clean test file"
-       src="PASTE-CLEAN-FILE-NO-MATCH-IMAGE-URL-HERE" />
+  <img src="https://github.com/user-attachments/assets/f9cde073-c09f-4cc9-b6e5-e0a8988b91a7"
+       alt="Linux forensic investigation evidence"
+       width="800">
 </p>
 
 <p align="center">
@@ -295,8 +295,39 @@ To make the rule stricter, I could require at least two patterns:
 condition:
     2 of ($pattern*)
 ```
-
 This change would reduce the chance that a file matches because it contains only one common or unrelated string.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/dc2c0282-159e-4831-b87e-d336200b7a19"
+       alt="Linux forensic investigation evidence"
+       width="800">
+</p>
+
+<p align="center">
+  <em>Figure 7: The WannaCry training rule updated to require at least two of the four defined patterns.</em>
+</p>
+<br><br>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/1d166d8a-105a-4f4b-88df-09b81df47f1b"
+       alt="Linux forensic investigation evidence"
+       width="800">
+</p>
+
+<p align="center">
+  <em>Figure 8: The stricter WannaCry YARA rule successfully matching `wannacry_training_sample.txt`.</em>
+</p>
+<br><br>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/a493cf72-be49-4e0e-b1eb-926d08db978a"
+       alt="Linux forensic investigation evidence"
+       width="800">
+</p>
+
+<p align="center">
+  <em>Figure 9: The stricter WannaCry YARA rule producing no match when scanning `clean_test.txt`.</em>
+</p>
 
 ---
 
